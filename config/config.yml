@@ -3,7 +3,7 @@ hardware:
   platform: opp
   driverboards: gen2
 opp:
-  ports: '/dev/tty.usbmodem1421'
+  ports: '/dev/ttyACM0'
 
 
 switches:
