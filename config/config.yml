@@ -1,0 +1,32 @@
+#config_version=4
+hardware:
+  platform: opp
+  driverboards: gen2
+opp:
+  ports: '/dev/tty.usbmodem1421'
+
+
+switches:
+  s_left_flipper:
+    number: 0-0
+    tags: left_flipper
+  s_right_flipper:
+    number: 0-1
+    tags: right_flipper
+
+coils:
+  c_flipper_left:
+    number: 0-2
+    allow_enable: true
+  c_flipper_right:
+    number: 0-3
+    allow_enable: yes
+
+flippers:
+  left_flipper:
+    main_coil: c_flipper_left
+    activation_switch: s_left_flipper
+  right_flipper:
+    main_coil: c_flipper_right
+    activation_switch: s_right_flipper
+
