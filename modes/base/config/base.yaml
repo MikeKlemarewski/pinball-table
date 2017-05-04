@@ -5,7 +5,7 @@ mode:
 
 scoring:
   s_target1_active:
-    score: 100
+    score: 1
   s_target2_active:
-    score: 100
+    score: 1
 

@@ -13,6 +13,8 @@ keyboard:
     switch: s_start
   q:
     switch: s_right_inlane
+  t:
+    switch: s_target1
 
 virtual_platform_start_active_switches:
   s_drain
