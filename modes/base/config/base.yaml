@@ -3,3 +3,9 @@ mode:
   start_events: ball_starting
   priority: 100
 
+scoring:
+  s_target1_active:
+    score: 100
+  s_target2_active:
+    score: 100
+

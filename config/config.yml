@@ -38,10 +38,10 @@ switches:
 
   # Ball launch
   s_right_inlane:
-    number: 0-9
+    number: 0-0
     tags: playfield_active
   s_start:
-    number: 0-10
+    number: 0-1
     tags: start
 
   # Plunger
@@ -58,10 +58,10 @@ switches:
 
   # Flippers
   s_left_flipper:
-    number: 0-0
+    number: 0-9
     tags: left_flipper
   s_right_flipper:
-    number: 0-1
+    number: 0-10
     tags: right_flipper
 
 coils:
