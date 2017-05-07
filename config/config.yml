@@ -2,25 +2,82 @@
 hardware:
   platform: opp
   driverboards: gen2
-opp:
-  ports: '/dev/tty.usbmodem1421'
 
+opp:
+  ports: '/dev/ttyACM0'
+
+# Virtual mode config
+
+keyboard:
+  s:
+    switch: s_start
+  q:
+    switch: s_right_inlane
+
+virtual_platform_start_active_switches:
+  s_drain
+
+# Machine Parts
+
+ball_devices:
+  bd_drain:
+    ball_switches: s_drain
+    eject_coil: c_drain_eject
+    eject_targets: bd_plunger
+    tags: drain, home, trough
+  bd_plunger:
+    ball_switches: s_plunger_lane
+    eject_coil: c_plunger
+    eject_timeouts: 3s
+    player_controlled_eject_event: s_launch_button_active
+    tags: ball_add_live
 
 switches:
-  s_left_flipper:
+  s_drain:
+    number: 0-8
+
+  # Ball launch
+  s_right_inlane:
     number: 0-0
+    tags: playfield_active
+  s_start:
+    number: 0-1
+    tags: start
+
+  # Plunger
+  s_plunger_lane:
+    number: 0-11
+  s_launch_button:
+    number: 0-16
+  # Targets
+  s_target1:
+    number: 0-2
+  s_target2:
+    number: 0-3
+
+  # Flippers
+  s_left_flipper:
+    number: 0-9
     tags: left_flipper
   s_right_flipper:
-    number: 0-1
+    number: 0-10
     tags: right_flipper
 
 coils:
+  c_drain_eject:
+    number: 0-4
+    pulse_ms: 20
+  c_plunger:
+    number: 0-5
+    pulse_ms: 20
+
+  # Flippers
   c_flipper_left:
-    number: 0-2
+    number: 0-6
     allow_enable: true
   c_flipper_right:
-    number: 0-3
-    allow_enable: yes
+    number: 0-7
+    allow_enable: true
 
 flippers:
   left_flipper:
@@ -29,4 +86,7 @@ flippers:
   right_flipper:
     main_coil: c_flipper_right
     activation_switch: s_right_flipper
+
+modes:
+  - base
 
