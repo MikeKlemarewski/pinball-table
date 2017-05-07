@@ -13,21 +13,14 @@ switches:
   s_right_flipper:
     number: 0-1
     tags: right_flipper
-  s_target1:
-    number: 0-3
-    tags: target1
-  s_target2:
-    number: 0-4
-    tags: target2
 
 coils:
   c_flipper_left:
-    number: 0-15
+    number: 0-2
     allow_enable: true
   c_flipper_right:
-    number: 0-16
-    allow_enable: true
-
+    number: 0-3
+    allow_enable: yes
 
 flippers:
   left_flipper:
@@ -37,8 +30,3 @@ flippers:
     main_coil: c_flipper_right
     activation_switch: s_right_flipper
 
-displays:
-  window:
-    width: 800
-    height: 600
-    
