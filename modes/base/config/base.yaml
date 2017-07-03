@@ -8,4 +8,5 @@ scoring:
     score: 1
   s_target2_active:
     score: 1
-
+  s_target3_active:
+    score: 1
