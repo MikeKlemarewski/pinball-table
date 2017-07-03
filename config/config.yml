@@ -19,6 +19,8 @@ keyboard:
     switch: s_target2
   3:
     switch: s_target3
+  r:
+    switch: s_right_flipper
   l:
     switch: s_left_flipper
 
@@ -68,11 +70,11 @@ switches:
 
   # Targets
   s_target1:
-    number: 0-24
+    number: 0-21
   s_target2:
-    number: 0-25
+    number: 0-22
   s_target3:
-    number: 0-26
+    number: 0-23
 
 coils:
   c_drain_eject:
@@ -97,6 +99,12 @@ flippers:
   right_flipper:
     main_coil: c_flipper_right
     activation_switch: s_right_flipper
+
+matrix_lights:
+  l_l_fliper:
+    number: 0-24
+    on_events: s_target1_active
+    off_events: s_target1_inactive
 
 modes:
   - base
