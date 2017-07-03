@@ -4,7 +4,7 @@ hardware:
   driverboards: gen2
 
 opp:
-  ports: '/dev/ttyACM0'
+  ports: '/dev/tty.usbmodem1421'
 
 # Virtual mode config
 
@@ -19,6 +19,8 @@ keyboard:
     switch: s_target2
   3:
     switch: s_target3
+  l:
+    switch: s_left_flipper
 
 virtual_platform_start_active_switches:
   s_drain
