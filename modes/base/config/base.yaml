@@ -1,0 +1,12 @@
+#config_version=4
+mode:
+  start_events: ball_starting
+  priority: 100
+
+scoring:
+  s_target1_active:
+    score: 1
+  s_target2_active:
+    score: 1
+  s_target3_active:
+    score: 1

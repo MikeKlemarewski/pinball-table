@@ -13,12 +13,19 @@ keyboard:
     switch: s_start
   q:
     switch: s_right_inlane
+  1:
+    switch: s_target1
+  2:
+    switch: s_target2
+  3:
+    switch: s_target3
+  l:
+    switch: s_left_flipper
 
 virtual_platform_start_active_switches:
   s_drain
 
 # Machine Parts
-
 ball_devices:
   bd_drain:
     ball_switches: s_drain
@@ -49,11 +56,6 @@ switches:
     number: 0-11
   s_launch_button:
     number: 0-16
-  # Targets
-  s_target1:
-    number: 0-2
-  s_target2:
-    number: 0-3
 
   # Flippers
   s_left_flipper:
@@ -62,6 +64,14 @@ switches:
   s_right_flipper:
     number: 0-10
     tags: right_flipper
+
+  # Targets
+  s_target1:
+    number: 0-24
+  s_target2:
+    number: 0-25
+  s_target3:
+    number: 0-26
 
 coils:
   c_drain_eject:
@@ -89,4 +99,3 @@ flippers:
 
 modes:
   - base
-
